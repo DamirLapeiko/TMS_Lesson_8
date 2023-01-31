@@ -9,31 +9,34 @@ import java.util.Scanner;
 public class HomeWork8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] array;
         System.out.println("What task do you want to see? Enter a number from 1 to 6: ");
         int taskNumber = sc.nextInt();
-        if (taskNumber >= 1 && taskNumber <= 6) {
             switch (taskNumber) {
                 case 1 -> {
                     System.out.println("Enter a year: ");
                     int year = sc.nextInt();
-                    if (DataTimeUtils.YearIsLeapOrNo(year)) {
+                    if (DataTimeUtils.isLeapYear(year)) {
                         System.out.println("This year is leap");
-                    } else System.out.println("This year is not leap");
+                    } else {
+                        System.out.println("This year is not leap");
+                    }
                 }
                 case 2 -> {
+                    int[] array;
                     System.out.println("Create a new array: ");
                     array = UserInputUtils.getNewArray();
                     double averageNum = ArrayUtils.getAverageNumber(array);
                     System.out.println("Average number from every elements : " + averageNum);
                 }
                 case 3 -> {
+                    int[] array;
                     System.out.println("Create a new array: ");
                     array = UserInputUtils.getNewArray();
                     ArrayUtils.getReverseArray(array);
                     System.out.println(Arrays.toString(array));
                 }
                 case 4 -> {
+                    int[] array;
                     System.out.println("Create a new array: ");
                     array = UserInputUtils.getNewArray();
                     System.out.println("Enter the number, whose index we will search for: ");
@@ -46,6 +49,7 @@ public class HomeWork8 {
                     }
                 }
                 case 5 -> {
+                    int[] array;
                     System.out.println("Create a new array: ");
                     array = UserInputUtils.getNewArray();
                     System.out.println("Enter the first index: ");
@@ -56,6 +60,7 @@ public class HomeWork8 {
                     System.out.println("Issue: " + Arrays.toString(array1));
                 }
                 case 6 -> {
+                    int[] array;
                     System.out.println("Create a new array: ");
                     array = UserInputUtils.getNewArray();
                     System.out.println("Enter page number: ");
@@ -65,9 +70,9 @@ public class HomeWork8 {
                     int[] array2 = ArrayUtils.getSubArrayFromPage(array, page, numberOfElements);
                     System.out.println("Result: " + Arrays.toString(array2));
                 }
+                default -> {
+                    System.out.println("Wrong number of task");
+                }
             }
-        } else {
-            System.out.println("Wrong number of task");
         }
     }
-}

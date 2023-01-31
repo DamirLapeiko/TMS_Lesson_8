@@ -7,7 +7,7 @@ import java.util.Scanner;
 //и соответствующее количество его значений.
 //Создай массив по вводимым пользователем данным и верни из функции.
 public class UserInputUtils {
-    public static int[] getNewArray(){
+    public static int[] getNewArray() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter array length");
         int length = sc.nextInt();
