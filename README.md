@@ -1,6 +1,6 @@
 Lesson 8 ДЗ №8
-1️⃣
-Создай Java проект в IDE.
+
+1️⃣Создай Java проект в IDE.
 Создай файл (класс) с именем DateTimeUtils.
 Объяви внутри DateTimeUtils глобальную функцию, которая принимает год и возвращает, является ли он високосным.
 Правила определения високосности подсмотри тут – https://learn.microsoft.com/ru-ru/office/troubleshoot/excel/determine-a-leap-year
