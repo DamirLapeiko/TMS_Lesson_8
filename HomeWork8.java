@@ -70,9 +70,7 @@ public class HomeWork8 {
                     int[] array2 = ArrayUtils.getSubArrayFromPage(array, page, numberOfElements);
                     System.out.println("Result: " + Arrays.toString(array2));
                 }
-                default -> {
-                    System.out.println("Wrong number of task");
-                }
+                default -> System.out.println("Wrong number of task");
             }
         }
     }
